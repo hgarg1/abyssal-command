@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abyssal-command.vercel.app/sitemap.xml

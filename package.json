@@ -1,0 +1,54 @@
+{
+  "name": "abyssal-command",
+  "version": "1.0.0",
+  "description": "An immersive realtime deep-sea operations console for the NEREID-7 research vessel.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "hgarg1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hgarg1/abyssal-command.git"
+  },
+  "homepage": "https://abyssal-command.vercel.app",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,CLIENT -c cyan,blue \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "start": "tsx server/index.ts",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "check": "npm run test && npm run build"
+  },
+  "dependencies": {
+    "@react-three/drei": "latest",
+    "@react-three/fiber": "latest",
+    "express": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "socket.io": "latest",
+    "socket.io-client": "latest",
+    "three": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "latest",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/three": "latest",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "^5.9.3",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}
